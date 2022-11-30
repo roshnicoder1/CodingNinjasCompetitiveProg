@@ -101,6 +101,36 @@ public class Solution {
 
 
 
+//Another Approach
+
+
+public class Solution {  
+
+    public static void rotate(int[] arr, int d) {
+    	//Your code goes here
+      
+            //reverse whole elements
+            if(arr.length>0){
+            reverseArray(arr,0,arr.length-1);
+            reverseArray(arr,0,arr.length-d-1);
+            reverseArray(arr,arr.length-d,arr.length-1);
+            //reverse first n-d elements and reverse d elements and concat
+            }
+}
+
+ public static void  reverseArray(int arr[],int firstIndex,int lastIndex){
+       
+        int j=0;
+        for(int i=firstIndex;i<=firstIndex+(lastIndex-firstIndex)/2;i++){
+            // swap elements
+           int temp=arr[i];
+           arr[i]=arr[lastIndex-j];
+           arr[lastIndex-j]=temp;
+           j++;
+        }
+    }
+    
+}
 
 
 
